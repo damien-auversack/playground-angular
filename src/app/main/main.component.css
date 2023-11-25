@@ -1,0 +1,18 @@
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.title {
+  font-size: xxx-large;
+  font-family: Rockwell, serif;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+.main {
+  text-align: justify;
+  font-family: "Rockwell Extra Bold", serif;
+  max-width: 1000px;
+}

@@ -1,0 +1,23 @@
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.footerText {
+  font-family: Rockwell, serif;
+}
+.separatorLineContainer {
+  display: flex;
+  justify-content: center;
+}
+.separatorLineTop, .separatorLineBottom {
+  border: solid var(--darkBlue) 1px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.separatorLineTop {
+  width: 80%;
+}
+.separatorLineBottom {
+  width: 90%;
+}

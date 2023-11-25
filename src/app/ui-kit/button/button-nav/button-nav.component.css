@@ -1,0 +1,19 @@
+.buttonContainer {
+  color: floralwhite;
+  background-color: var(--darkBlue);
+  padding: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+}
+.buttonContainer:hover {
+  background-color: var(--darkBlueHover);
+}
+.buttonContainer:hover .buttonText {
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.1);
+}
+.buttonContainer .buttonText {
+  font-family: Rockwell, serif;
+  font-size: medium;
+}
