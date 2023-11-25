@@ -1,0 +1,26 @@
+.buttonContainer {
+  padding: 20px;
+  cursor: pointer;
+  background-color: var(--darkBlue); /* Couleur bleu foncé flat */
+
+  border-radius: 2px;
+  color: floralwhite;
+  user-select: none;
+}
+.buttonContainer:hover {
+  background-color: var(--darkBlueHover); /* Couleur de fond au survol */
+}
+
+.buttonContainer:hover .buttonText {
+  transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.1);
+}
+
+.buttonContainer .buttonText {
+  display: inline-block;
+  font-family: Rockwell, serif;
+  font-size: medium;
+}
+.buttonText:hover {
+
+}
