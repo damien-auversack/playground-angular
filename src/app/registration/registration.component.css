@@ -1,13 +1,18 @@
 .titleContainer {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 .title {
   font-size: xxx-large;
   font-family: Rockwell, serif;
 }
-.loremIpsum {
+.mainContainer {
+  display: flex;
+  justify-content: center;
+}
+.main {
   text-align: justify;
   font-family: "Rockwell Extra Bold", serif;
-  margin: 25px 50px;
+  max-width: 1000px;
 }
