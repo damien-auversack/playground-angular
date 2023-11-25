@@ -13,4 +13,5 @@ import {RouterLink} from "@angular/router";
 export class NavLoginComponent {
   labelLogin: string = "Login";
   labelInscription: string = "Inscription";
+
 }

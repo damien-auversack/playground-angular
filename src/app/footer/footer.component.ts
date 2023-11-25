@@ -9,5 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  footerLabel: string = "Réalisé par ...";
 
 }

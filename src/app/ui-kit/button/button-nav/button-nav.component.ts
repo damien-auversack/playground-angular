@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './button-nav.component.css'
 })
 export class ButtonNavComponent {
-
   @Input()
   textContent: string = "";
 

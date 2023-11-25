@@ -4,11 +4,6 @@ html, body {
   padding: 0;
   margin: 0;
 }
-body {
-  display: flex;
-  flex-direction: column;
-}
-
 :root {
   --darkBlue: #2c3e50;
   --darkBlueHover: #34495e;

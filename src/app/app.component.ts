@@ -15,5 +15,5 @@ import {RegistrationComponent} from "./registration/registration.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'playground';
+  title: string = 'playground';
 }

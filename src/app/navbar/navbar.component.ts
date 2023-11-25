@@ -13,5 +13,4 @@ import {NavLoginComponent} from "./nav-login/nav-login.component";
 })
 export class NavbarComponent {
 
-
 }
