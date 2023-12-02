@@ -1,9 +1,8 @@
-<div class="titleContainer">
-  <span class="title">{{titleSite}}</span>
-</div>
-
 <div class="mainContainer">
-  <p class="main">
-    {{loremIpsumParagraph}}
-  </p>
+  <div class="loginContainer">
+    <h2 class="loginTitle">Registration</h2>
+    <form>
+      <input *ngFor="let input of inputs" type="{{input.type}}" name="{{input.name}}" class="{{input.class}}" placeholder="{{input.placeholder}}" value="{{input.value}}">
+    </form>
+  </div>
 </div>

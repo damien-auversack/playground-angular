@@ -1,18 +1,49 @@
-.titleContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-.title {
-  font-size: xxx-large;
-  font-family: Rockwell, serif;
-}
 .mainContainer {
   display: flex;
   justify-content: center;
 }
-.main {
-  text-align: justify;
-  font-family: "Rockwell Extra Bold", serif;
-  max-width: 1000px;
+.loginContainer input:not(:last-child) {
+  margin-bottom: 25px;
+}
+.loginContainer input {
+  border-radius: 5px;
+  padding: 15px 15px 15px 15px;
+  font-size: large;
+  font-family: Rockwell, serif;
+  box-sizing: border-box;
+  border: none;
+}
+.loginContainer form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.loginInput {
+  background-color: var(--lightGreen);
+  color: whitesmoke;
+  border: none;
+  box-shadow: 4px 5px 8px 1px var(--oxfordBlue);
+  transition: box-shadow 0.05s ease;
+}
+.loginInput:hover {
+  cursor: pointer;
+}
+.loginInput:active {
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  filter: brightness(0.97);
+}
+.loginTitle {
+  font-size: xx-large;
+  color: whitesmoke;
+}
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px 40px 40px;
+  margin-top: 30px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--cambridgeBlue);
 }

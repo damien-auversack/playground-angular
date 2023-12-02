@@ -1,12 +1,8 @@
 <div class="mainContainer">
-
   <div class="loginContainer">
     <h2 class="loginTitle">Login</h2>
     <form>
-      <input type="email" name="Email" class="emailInput" placeholder="E-Mail">
-      <input type="password" name="Email" class="passwordInput" placeholder="Password">
-      <input type="button" name="Login" class="loginInput" value="Connexion">
+      <input *ngFor="let input of inputs" type="{{input.type}}" name="{{input.name}}" class="{{input.class}}" placeholder="{{input.placeholder}}" value="{{input.value}}">
     </form>
   </div>
-
 </div>
