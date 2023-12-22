@@ -1,8 +1,12 @@
 <div class="mainContainer">
   <div class="loginContainer">
     <h2 class="loginTitle">Registration</h2>
-    <form>
-      <input *ngFor="let input of inputs" type="{{input.type}}" name="{{input.name}}" class="{{input.class}}" placeholder="{{input.placeholder}}" value="{{input.value}}">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="pseudo" class="pseudoInput" placeholder="Pseudo" formControlName="pseudo">
+      <input type="email" name="email" class="emailInput" placeholder="E-Mail" formControlName="email">
+      <input type="password" name="password" class="passwordInput" placeholder="Password" formControlName="password">
+      <input type="password" name="confirmPassword" class="passwordInput" placeholder="Confirm Password" formControlName="confirmPassword">
+      <button type="submit" class="loginInput">Connexion</button>
     </form>
   </div>
 </div>

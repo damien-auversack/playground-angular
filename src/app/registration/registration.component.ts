@@ -1,55 +1,26 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-interface Input {
-  type:string,
-  name:string,
-  class:string,
-  placeholder:string,
-  value:string,
-}
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.css'
 })
 export class RegistrationComponent {
-  inputs:Input[] = [
-    {
-      type:"pseudo",
-      name:"pseudo",
-      class:"pseudoInput",
-      placeholder:"Pseudo",
-      value:"",
-    },
-    {
-      type:"email",
-      name:"email",
-      class:"emailInput",
-      placeholder:"E-Mail",
-      value:"",
-    },
-    {
-      type:"password",
-      name:"password",
-      class:"passwordInput",
-      placeholder:"Password",
-      value:"",
-    },
-    {
-      type:"password",
-      name:"password",
-      class:"passwordInput",
-      placeholder:"Confirm Password",
-      value:"",
-    },
-    {
-      type:"button",
-      name:"register",
-      class:"loginInput",
-      placeholder:"",
-      value:"Inscription",
-    },
-  ];
+  registrationForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.registrationForm = this.fb.group({
+      pseudo: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required]
+    });
+  }
+
+  onSubmit() {
+    console.log(this.registrationForm?.value);
+  }
 }

@@ -24,6 +24,12 @@
   border: none;
   box-shadow: 4px 5px 8px 1px var(--oxfordBlue);
   transition: box-shadow 0.05s ease;
+  height: 50px;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  font-family: Rockwell, serif;
+  padding: 15px;
 }
 .loginInput:hover {
   cursor: pointer;
