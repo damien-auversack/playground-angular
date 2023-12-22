@@ -1,43 +1,24 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-interface Input {
-  type:string,
-  name:string,
-  class:string,
-  placeholder:string,
-  value:string,
-}
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  loginForm: FormGroup;
 
-  inputs:Input[] = [
-    {
-      type:"email",
-      name:"email",
-      class:"emailInput",
-      placeholder:"E-Mail",
-      value:"",
-    },
-    {
-      type:"password",
-      name:"password",
-      class:"passwordInput",
-      placeholder:"Password",
-      value:"",
-    },
-    {
-      type:"button",
-      name:"login",
-      class:"loginInput",
-      placeholder:"",
-      value:"Connexion",
-    },
-  ];
+  constructor(private fb: FormBuilder) {
+    this.loginForm = this.fb.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
 
+  onSubmit() {
+    console.log(this.loginForm?.value);
+  }
 }
