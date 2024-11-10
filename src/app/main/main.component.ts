@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {UserService} from "../services/user/user.service";
+import {CardGridComponent} from "../card-grid/card-grid.component";
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardGridComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

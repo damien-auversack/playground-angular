@@ -6,12 +6,14 @@
 .title {
   font-size: xxx-large;
   font-family: Rockwell, serif;
+  line-height: 1;
 }
 .mainContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .main {
   text-align: justify;
