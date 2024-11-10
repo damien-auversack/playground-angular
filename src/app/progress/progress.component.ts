@@ -1,13 +1,13 @@
 import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from "@angular/router";
+import {ActivatedRoute, Router, RouterLink} from "@angular/router";
 import { TorrentService } from "../services/torrent/torrent.service";
 import { Subscription } from "rxjs";
 
 @Component({
   selector: 'app-progress',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './progress.component.html',
   styleUrls: ['./progress.component.css'] // Correction du nom de propriété (styleUrls)
 })
