@@ -26,4 +26,18 @@ export class DownloadsComponent implements OnInit{
   getFileUrl(file: string): string {
     return  `${environment.apiUrl}:${environment.port}/downloads/${file}`;
   }
+
+  onDeleteFile(filename: string): void {
+    this.torrentService.deleteFile(filename).subscribe({
+      next: () => {
+        console.log('Fichier supprimé avec succès');
+        // Mettre à jour la liste des fichiers téléchargés
+        this.downloadedFiles = this.downloadedFiles.filter(file => file !== filename);
+      },
+      error: (error) => {
+        console.error('Erreur lors de la suppression du fichier', error);
+      },
+    });
+  }
+
 }
