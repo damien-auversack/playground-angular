@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Uploader un fichier .torrent</h1>
+  <div class="card p-4 shadow-sm">
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="torrentFile" class="form-label">Sélectionnez un fichier .torrent :</label>
+        <input type="file" class="form-control" id="torrentFile" (change)="onFileSelected($event)" accept=".torrent" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="!selectedFile || isSubmitting">Envoyer</button>
+    </form>
+  </div>
+</div>
