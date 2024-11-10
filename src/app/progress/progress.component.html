@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Téléchargement en cours...</h1>
+  <div class="progress">
+    <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+         [attr.aria-valuenow]="progress" aria-valuemin="0" aria-valuemax="100" [style.width.%]="progress">
+      {{ progress }}%
+    </div>
+  </div>
+  <p id="progress-text" class="text-center mt-3">{{ progress }}%</p>
+  <div class="mt-4 text-center">
+    <a routerLink="/" class="btn btn-secondary">Retour à l'accueil</a>
+  </div>
+</div>
