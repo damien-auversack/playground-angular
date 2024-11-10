@@ -22,6 +22,19 @@ export class TorrentService {
     return this.http.request(req);
   }
 
+  // Méthode pour supprimer un fichier téléchargé
+  deleteFile(filename: string): Observable<HttpEvent<any>> {
+    // Encoder le nom du fichier pour éviter les problèmes liés aux caractères spéciaux et aux espaces
+    const encodedFilename = encodeURIComponent(filename);
+
+    // Créer la requête HTTP DELETE avec configuration
+    const req = new HttpRequest('DELETE', `${this.baseUrl}/delete/${encodedFilename}`, {
+      reportProgress: true
+    });
+
+    return this.http.request(req);
+  }
+
   getProgress(torrentId: string): Observable<number> {
     return new Observable<number>((observer) => {
       const eventSource = new EventSource(`${this.baseUrl}/progress/${torrentId}`);
