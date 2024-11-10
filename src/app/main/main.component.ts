@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {UserService} from "../services/user.service";
+import {UserService} from "../services/user/user.service";
 import {catchError, map, of} from "rxjs";
 import {error} from "@angular/compiler-cli/src/transformers/util";
 
