@@ -12,6 +12,7 @@ import {RouterLink} from "@angular/router";
 })
 export class NavNavigationComponent {
   labelHome: string = "Home";
-  labelContact: string = "Contact";
+  labelTorrent: string = "Torrent";
+  labelDownload: string = "Download";
 
 }
