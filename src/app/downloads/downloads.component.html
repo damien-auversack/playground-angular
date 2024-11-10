@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Fichiers téléchargés</h1>
+  <ul class="list-group">
+    <li *ngFor="let file of downloadedFiles" class="list-group-item">
+      <!-- Lien de téléchargement pour chaque fichier -->
+      <a [href]="getFileUrl(file)" [attr.download]="file">{{ file }}</a>
+    </li>
+  </ul>
+  <div class="mt-4 text-center">
+    <a [routerLink]="['/torrent']" class="btn btn-secondary">Retour à l'accueil</a>
+  </div>
+</div>
